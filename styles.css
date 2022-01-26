@@ -2,6 +2,7 @@
     margin: 0%;
     padding: 0%;
     text-decoration: none;
+    font-family: 'Shadows Into Light', cursive;
 }
 
 
@@ -24,7 +25,31 @@
 .logo{ margin-left: 2%;}
 
 /* tienda */
-.tienda{ font-size: 2rem;}
+.tienda{ font-size: 2rem;
+  margin-left: 15%;
+  animation-duration: 5s;
+  animation-name: slidein; 
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out ;
+  
+  }
+  
+  @keyframes slidein{ 
+  
+      from {
+          margin-left: 0%;
+          margin-right: 40%;
+          color: white;
+          
+        }
+      
+        to {
+          margin-left: 40%;
+          margin-right: 0%;
+       
+        }
+  }
 
 /* carro */
 .carro{ margin-right: 2%;}
@@ -32,6 +57,12 @@
 /* menu */
   .bg-color{background-color: cadetblue;}
   .collapse{display: flex;}
+
+  .nav-link{margin-left: 5rem;
+    transition: 1s linear;}
+  .nav-link:hover{transform: scale(1.5); 
+    background-color: rgb(57, 114, 116);
+    border-radius: 20px}
   
 /* article */
 /* desaparecer cuando sea responsive 
@@ -52,6 +83,35 @@ y al carrousel tambien */
   .article-cuatro { grid-area: 1 / 4 / 2 / 5; }
 /* fin article */
 
+/* section productos index */
+h2{display: flex;
+justify-content: center;}
+
+.home-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 0px;
+  }
+  
+  .home-item-1 { grid-area: 1 / 1 / 2 / 2; width: 75%;}
+  .home-item-2 { grid-area: 1 / 2 / 2 / 3; width: 75%;}
+  .home-item-3 { grid-area: 1 / 3 / 2 / 4; width: 75%;}
+  .home-item-4 { grid-area: 1 / 4 / 2 / 5; width: 75%;}
+
+  /* fin section productos index */
+
+  /* section politicas */
+
+.texto-politicas  .section-politicas{
+display: flex;
+justify-content: center;
+align-items: center;}
+
+
+  /*  fin section politicas */
+  
   /* footer */
 
   .footer-container {
@@ -81,4 +141,17 @@ y al carrousel tambien */
     .footer-logos { grid-area: 2 / 3 / 3 / 4; display: flex;justify-content: flex-end;}
 
 
-    
+    /* medias queries */
+
+    /* celular */
+
+@media only screen and (max-width:600px){
+#carrousel {  display:none}
+
+#article {  display:none}
+
+.home-container 
+{ display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;}}
