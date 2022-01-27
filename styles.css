@@ -109,6 +109,9 @@ display: flex;
 justify-content: center;
 align-items: center;}
 
+.imagen-politicas{ margin-left: 45%;
+
+}
 
   /*  fin section politicas */
   
@@ -128,7 +131,7 @@ align-items: center;}
 
 /* links en el footer */
     footer div div a{text-decoration: none;color: black;}
-    
+
     
     .footer-menu { grid-area: 1 / 1 / 2 / 2; 
     display: flex; justify-content:flex-start; font-size: 1.2rem;}
