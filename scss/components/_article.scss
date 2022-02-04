@@ -1,0 +1,23 @@
+  
+/* article */
+
+.article-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .article-uno { grid-area: 1 / 1 / 2 / 2; }
+    .article-dos { grid-area: 1 / 2 / 2 / 3; }
+    .article-tres { grid-area: 1 / 3 / 2 / 4; }
+    .article-cuatro { grid-area: 1 / 4 / 2 / 5; }
+
+    //medias queries - mobile/
+
+    @media only screen and (max-width:600px){
+    
+        
+        #article {  display:none}}
+  /* fin article */

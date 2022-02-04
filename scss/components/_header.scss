@@ -1,0 +1,58 @@
+
+.header-estatico{
+    height: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 0px;
+    background-color: rgb(145, 99, 197);
+    display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+}
+/* logo */
+.logo{ margin-left: 2%;}
+
+/* nombre */
+.tienda{ font-size: 2rem;
+  margin-left: 15%;
+  animation-duration: 5s;
+  animation-name: slidein; 
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out ;
+  
+  }
+  
+  @keyframes slidein{ 
+  
+      from {
+          margin-left: 0%;
+          margin-right: 40%;
+          color: white;
+          
+        }
+      
+        to {
+          margin-left: 40%;
+          margin-right: 0%;
+       
+        }
+  }
+
+/* carro de compras*/
+.carro{ margin-right: 2%;}
+
+/* menu */
+  .bg-color{background-color: cadetblue;}
+  .collapse{display: flex;}
+
+  .nav-link{margin-left: 5rem;
+    transition: 1s linear;}
+  .nav-link:hover{transform: scale(1.5); 
+    background-color: rgb(57, 114, 116);
+    border-radius: 20px}
