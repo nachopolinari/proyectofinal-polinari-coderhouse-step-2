@@ -15,13 +15,3 @@
     .article-cuatro { grid-area: 1 / 4 / 2 / 5; }
 
         /* media queries en article para mobile */
-@media only screen and (max-width: 600px) {
-    #article {
-      display: none;}
-  }
-  
-  /* media queries en article para tablet  REVISAR 3 ERRORES */
-  
-  @media only screen (min-width: 320px) and (max-width: 760px){ .article-container {display:grid; grid-template-columns: 2fr 2fr}}
-    
-  /* fin article */
