@@ -1,0 +1,26 @@
+/*section contacto*/
+
+.section-contacto{background-color: black; margin-bottom: 1%;}
+
+.contacto-container{
+    display: flex;
+    justify-content: space-evenly;
+    color: #00bfd8;
+}
+
+.contacto-item{
+    padding: 5px;
+    width: 45%;
+}
+.item{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    justify-items: center;
+    }
+    
+    .logos{ grid-area: 1 / 1 / 2 / 2; }
+    .text-contacto { grid-area: 1 / 2 / 2 / 3; }

@@ -5,19 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Online</title>
+    <!-- SEO - 41 caracteres -->
+    <title>Tienda Online - Outlet de ropa en Córdoba</title>
+    <!-- meta tag -->
+    <meta name="description"
+        content="Tienda Online de ropa a muy buen precio en Córdoba. Tendencias ,nuevos ingresos y promociones.">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/multimedia/icono/favicon.ico" type="image/x-icon">
+    <!-- KeyWord -->
+    <meta name="keywords"
+        content="Tienda, online, córdoba, outlet, ropa deportiva, Penguin, Lacoste, Tommy Hilfiger, remera, buzo, camisa, gorra, chomba, jogger, bermuda, look, tendencia, moda, outfit, calidad,envíos, cuotas">
+    <!-- open graph -->
+    <meta property="og:title" content="Tienda Online - Outlet de ropa en Córdoba">
+    <meta property="og:description"
+        content="Tienda Online de ropa a muy buen precio en Córdoba. Tendencias ,nuevos ingresos y promociones.">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!-- font family -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
     </style>
+
+
 </head>
 
 <body>
@@ -39,15 +56,19 @@
             <h1 class="tienda">Tienda OnLine</h1>
 
             <!-- carro de compras -->
-            <div class="carro"><svg xmlns="http://www.w3.org/2000/svg"
-                    class="icon icon-tabler icon-tabler-shopping-cart" width="44" height="44" viewBox="0 0 24 24"
-                    stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <div class="cart">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="44"
+                    height="44" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <circle cx="6" cy="19" r="2" />
                     <circle cx="17" cy="19" r="2" />
                     <path d="M17 17h-11v-14h-2" />
                     <path d="M6 5l14 1l-1 7h-13" />
-                </svg></div>
+                </svg>
+                <span class="cart-quantity">0</span>
+            </div>
+
         </div>
         <!-- menu responsive-hamburguesa hecho con bootstrap -->
         <div class="nav-bar">
@@ -77,22 +98,24 @@
     <!-- fin header -->
 
     <!-- carrousel con bootstrap -->
-    <section id="carrousel">
+    <section class="carrousel">
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="multimedia/carrousel/imagen-carrousel1.jpg" class="d-block w-100"
-                        alt="envios a domicilio">
+                        alt="Te enviamos tu pedido a domicilio con Correo Argentino.">
                 </div>
                 <div class="carousel-item">
-                    <img src="multimedia/carrousel/imagen-carrousel2.jpg" class="d-block w-100" alt="feliz navidad">
+                    <img src="multimedia/carrousel/imagen-carrousel2.jpg" class="d-block w-100"
+                        alt="Feliz navidad y año nuevo. Promociones y ofertas de navidad.">
                 </div>
                 <div class="carousel-item">
                     <img src="multimedia/carrousel/imagen-carrousel3.jpg" class="d-block w-100"
-                        alt="3 cuotas sin interes">
+                        alt="Oportunidad. 3 cuotas sin interes en todas las prendas. ">
                 </div>
                 <div class="carousel-item">
-                    <img src="multimedia/carrousel/imagen-carrousel4.jpg" class="d-block w-100" alt="moda de verano">
+                    <img src="multimedia/carrousel/imagen-carrousel4.jpg" class="d-block w-100"
+                        alt="Tenemos el outfit de moda que buscas. Temporada 2022">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
@@ -109,265 +132,121 @@
     </section>
 
     <!-- article -->
-    <article id="article">
-        <div class="article-container">
-            <div class="article-uno">
-                <div class="card">
-                    <div class="row g-0">
-                        <div class="col-5 col-sm-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-align-center"
-                                width="52" height="52" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <line x1="4" y1="6" x2="20" y2="6" />
-                                <line x1="8" y1="12" x2="16" y2="12" />
-                                <line x1="6" y1="18" x2="18" y2="18" />
-                            </svg>
-                        </div>
-                        <div class="col-7 col-sm-8">
-                            <div class="card-body">
-                                <h5 class="card-title">ENVÍOS A TODO EL PAÍS</h5>
-                                <p class="card-text">Recibí tu outfit sin moverte de casa.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="article-dos">
-                <div class="card">
-                    <div class="row g-0">
-                        <div class="col-5 col-sm-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-align-justified"
-                                width="52" height="52" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <line x1="4" y1="6" x2="20" y2="6" />
-                                <line x1="4" y1="12" x2="20" y2="12" />
-                                <line x1="4" y1="18" x2="16" y2="18" />
-                            </svg>
-                        </div>
-                        <div class="col-7 col-sm-8">
-                            <div class="card-body">
-                                <h5 class="card-title">MEDIOS DE PAGO</h5>
-                                <p class="card-text">Podés abonar con cualquier tarjeta de crédito, débito o
-                                    transferencia.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="article-tres">
-                <div class="card">
-                    <div class="row g-0">
-                        <div class="col-5 col-sm-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-align-left"
-                                width="52" height="52" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <line x1="4" y1="6" x2="20" y2="6" />
-                                <line x1="4" y1="12" x2="14" y2="12" />
-                                <line x1="4" y1="18" x2="18" y2="18" />
-                            </svg>
-                        </div>
-                        <div class="col-7 col-sm-8">
-                            <div class="card-body">
-                                <h5 class="card-title">COMPRA PROTEGIDA</h5>
-                                <p class="card-text">Comprá con seguridad.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="article-cuatro">
-                <div class="card">
-                    <div class="row g-0">
-                        <div class="col-5 col-sm-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-align-right"
-                                width="52" height="52" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <line x1="4" y1="6" x2="20" y2="6" />
-                                <line x1="10" y1="12" x2="20" y2="12" />
-                                <line x1="6" y1="18" x2="20" y2="18" />
-                            </svg>
-                        </div>
-                        <div class="col-7 col-sm-8">
-                            <div class="card-body">
-                                <h5 class="card-title">CONTACTANOS</h5>
-                                <p class="card-text">Cualquier duda, escribinos por whatsapp.
-
-                                </p>
-                            </div>
-                        </div>
+    <article class="article-container">
+        <div>
+            <p>
+                <button class="btn btn-secondary boton-article" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                    ENVÍOS A TODO EL PAÍS
+                </button>
+            </p>
+            <div style="min-height: 120px;">
+                <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                    <div class="card card-body" style="width: 160px;">
+                        Recibí tu outfit sin moverte de casa.
                     </div>
                 </div>
             </div>
         </div>
+        <div>
+            <p>
+                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseWidthExample" aria-edxpaned="false" aria-controls="collapseWidthExample">
+                    MEDIOS DE PAGO
+
+                </button>
+            </p>
+            <div style="min-height: 120px;">
+                <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                    <div class="card card-body" style="width: 160px;">
+                        Podés abonar con cualquier tarjeta de crédito, débito o transferencia.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p>
+                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                    COMPRA PROTEGIDA
+                </button>
+            </p>
+            <div style="min-height: 120px;">
+                <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                    <div class="card card-body" style="width: 160px;">
+                        Comprá con seguridad.
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p>
+                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                    CONTACTANOS
+                </button>
+            </p>
+            <div style="min-height: 120px;">
+                <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                    <div class="card card-body" style="width: 160px;">
+                        Cualquier duda, escribinos en nuestras redes.
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </article>
     <!-- fin article -->
 
-    <!-- secccion home -->
-    <section class="section-home">
-        <div>
-            <h2>SALE!</h2>
-            <div class="home-container">
-                <div class="home-item-1">
-                    <div class="card">
-                        <img src="multimedia/sale/campera-azul-tommy.jpeg" class="card-img-top" alt="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="home-item-2">
-                    <div class="card">
-                        <img src="multimedia/sale/campera-azul-tommy.jpeg" class="card-img-top" alt="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="home-item-3">
-                    <div class="card">
-                        <img src="multimedia/sale/campera-azul-tommy.jpeg" class="card-img-top" alt="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="home-item-4">
-                    <div class="card">
-                        <img src="multimedia/sale/campera-azul-tommy.jpeg" class="card-img-top" alt="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <h2>NUEVOS INGRESOS</h2>
-            <div class="home-container">
-                <div class="home-item-1">
-                    <div class="card">
-                        <img src="multimedia/sale/campera-azul-tommy.jpeg" class="card-img-top" alt="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="home-item-2">
-                    <div class="card">
-                        <img src="multimedia/sale/campera-azul-tommy.jpeg" class="card-img-top" alt="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="home-item-3">
-                    <div class="card">
-                        <img src="multimedia/sale/campera-azul-tommy.jpeg" class="card-img-top" alt="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="home-item-4">
-                    <div class="card">
-                        <img src="multimedia/sale/campera-azul-tommy.jpeg" class="card-img-top" alt="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <h2>TENDENCIAS</h2>
-            <div class="home-container">
-                <div class="home-item-1">
-                    <div class="card">
-                        <img src="multimedia/sale/campera-azul-tommy.jpeg" class="card-img-top" alt="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="home-item-2">
-                    <div class="card">
-                        <img src="multimedia/sale/campera-azul-tommy.jpeg" class="card-img-top" alt="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="home-item-3">
-                    <div class="card">
-                        <img src="multimedia/sale/campera-azul-tommy.jpeg" class="card-img-top" alt="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="home-item-4">
-                    <div class="card">
-                        <img src="multimedia/sale/campera-azul-tommy.jpeg" class="card-img-top" alt="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
+    <!-- seccion home -->
+    <section class="section-home-container">
+        <!-- productos "sale" -->
+        <h2>NUEVOS INGRESOS</h2>
+        <!-- Cards -->
+
+        <div class="card-container" id="cardContainer">
+            <!-- codigo inyectado desde JS -->
         </div>
     </section>
+    <section>            
+        <h3 class="limite">Solo puedes comprar hasta 5 productos por vez.</h3>
+
+        <div class="sectionCarrito">
+            <!-- <div class="cartPadre"> -->
+
+            <div class="div1"></div>
+            <div class="div2"> </div>
+            <div class="div3"> </div>
+            <div class="div4"> </div>
+            <div class="div5"> </div>
+            <div class="div6"> </div>
+        </div>
+            <button class="comprarBtn">COMPRAR</button>
+            <button class="volverBtn">VOLVER</button>
+
+        
+        
+    </section>
+
+
 
     <!-- inicio footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-menu"> <a href="index.html"> Volver al Menú </a></div>
-            <div class="footer-contacto"> <a href="contactos.html"> Contacto </a></div>
+            <div class="footer-contacto"> <a href="/files/contacto.html"> Contactanos que es gratis! </a></div>
             <div class="footer-redes"> Redes</div>
             <div class="footer-derechos">Todos los derechos reservados. </div>
             <div class="footer-logos">
                 <!-- logo whatsapp -->
-                <a href="contacto.html"><svg xmlns="http://www.w3.org/2000/svg"
+                <a href="/files/contacto.html"><svg xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-brand-whatsapp" width="20" height="20" viewBox="0 0 24 24"
                         stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -376,7 +255,7 @@
                             d="M9 10a0.5 .5 0 0 0 1 0v-1a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1" />
                     </svg> </a>
                 <!-- logo instagram -->
-                <a href="contacto.html"><svg xmlns="http://www.w3.org/2000/svg"
+                <a href="/files/contacto.html"><svg xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-brand-instagram" width="20" height="20" viewBox="0 0 24 24"
                         stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -385,7 +264,7 @@
                         <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
                     </svg></a>
                 <!-- logo facebook -->
-                <a href="contacto.html"><svg xmlns="http://www.w3.org/2000/svg"
+                <a href="/files/contacto.html"><svg xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-brand-facebook" width="20" height="20" viewBox="0 0 24 24"
                         stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -394,7 +273,9 @@
             </div>
         </div>
     </footer>
-
+    <!-- Toastify -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/maindos.js"></script>
 
 </body>
 

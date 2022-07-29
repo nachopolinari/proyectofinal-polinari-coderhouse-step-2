@@ -1,12 +1,21 @@
  /* section politicas */
 
- .texto-politicas  .section-politicas{
-    display: flex;
-    justify-content: center;
-    align-items: center;}
-    
-    .imagen-politicas{ margin-left: 45%;
-    
-    }
-    
-      /*  fin section politicas */
+
+.section-politicas{
+  background-color: black;
+  margin-bottom: 1%;
+ 
+}
+
+.politicas-container{ display: flex;
+  align-items: center;
+margin-left: 5%;
+margin-right: 5%;
+}
+
+.politicas-img{ border-radius: 15%;}
+
+.politicas-text{margin-left: 2%;
+color: #00bfd8;}
+
+  

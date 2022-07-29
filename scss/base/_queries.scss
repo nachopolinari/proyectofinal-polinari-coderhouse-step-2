@@ -1,0 +1,38 @@
+/*media queries para mobile hasta 800px*/
+
+/*carrousel*/
+@media screen and (max-width:800px){
+  .carrousel {  display:none}}
+
+/*article*/
+
+@media screen and (max-width:800px){
+  .article-container {  display:none}}
+
+/*tarjetas de productos (home y productos)*/
+
+  @media screen and (max-width:800px){.card-container{display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;} }
+
+    /*imagenes en "politicas de devolucion"*/
+
+  @media screen and (max-width:800px){.politicas-img { display: none;}}
+
+  /*contacto*/
+
+  @media screen and (max-width:800px){.contacto-container{display: grid;
+    justify-items: center;}}
+
+/*media queries para tablet de 801px a 1050px*/
+
+/*tarjeta de productos en "productos"*/
+
+@media screen and (min-width:801px)and (max-width:1050px){
+  .card-container {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+  }
+  
+  }
