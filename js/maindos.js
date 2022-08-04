@@ -1,57 +1,39 @@
-// Definimos nuestra clase modelo de producto
-
-class Prendas {
-    constructor(id, nombre, color, marca, tela, precio, img) {
-        this.id = id
-        this.nombre = nombre
-        this.color = color
-        this.marca = marca
-        this.tela = tela
-        this.precio = precio
-        this.img = img
-    }
-}
-// Generamos nuestros productos
-
-// en la carpeta data estan todos los productos pero no llegue a trabajar con todos
-// remeras
-const remera001 = new Prendas('001', 'Remera', 'amarilla', 'Lacoste', 'de algodon', '2000', "./multimedia/remeras/remera-amarillo.jpeg");
-const remera002 = new Prendas('002', 'Remera', 'azul', 'Lacoste', 'de algodon', '2500', "./multimedia/remeras/remera-azul.jpeg");
-const remera003 = new Prendas('003', 'Remera', 'blanca', 'Lacoste', 'de algodon', '3000', "./multimedia/remeras/remera-blanco.jpeg");
-
-// Creamos un array con todos nuestros productos dentro
+// ARRAY con todos nuestros productos dentro
 
 const productos = [remera001, remera002, remera003]
 
+// ARRAY vacio carrito
+
 let carrito = []
 
-// FUNCIONES 
-
+// SELECTORES
 const cardContainer = document.querySelector('#cardContainer')
 const sectionCarrito = document.querySelector('.sectionCarrito')
+const botonVaciar = document.getElementById('btnVaciar')
+const precioTotal = document.getElementById('precioTotal')
+const contadorCarrito = document.getElementById('cart-quantity')
 
 
-productos.forEach((Prendas) => {
+// DOM
+productos.forEach((remera) => {
     const card = document.createElement('div')
     card.className = 'card'
     card.innerHTML = `
     
-        <img src="${Prendas.img}" alt="${Prendas.nombre}" class="card-img">
+        <img src="${remera.img}" alt="${remera.nombre}" class="card-img">
         <div class="container">
-            <h4 class="prodName"><b>${Prendas.nombre} ${Prendas.tela}</b></h4>
-            <p class="prodColor">Color: ${Prendas.color}</p>        
-            <p class="prodMarca ">Marca:${Prendas.marca}</p>
-            <p clas="prodPrice"> $${Prendas.precio}</p> <!-*precio*->
+            <h4 class="prodName"><b>${remera.nombre} ${remera.tela}</b></h4>
+            <p class="prodColor">Color: ${remera.color}</p>        
+            <p class="prodMarca ">Marca:${remera.marca}</p>
+            <p clas="prodPrice"> $${remera.precio}</p> <!-*precio*->
             
-            <button class="buttonCTA" id="mostrarToast" data-id="${Prendas.id}">Comprar</button>
+            <button class="buttonCTA" id="mostrarToast" data-id="${remera.id}">Comprar</button>
         </div>
     `
     cardContainer.append(card)
 })
 
-// EVENTLISTENER 
-
-
+// FUNCIONES
 
 const agregarProducto = (e) => {
     const productoElegido = e.target.getAttribute('data-id')
@@ -60,7 +42,6 @@ const agregarProducto = (e) => {
     if (carrito.length < 5) {
         carrito.push(prendaAgregada)
     } else {
-
         Toastify({
             text: "Solo puedes comprar hasta 5 productos por vez.",
             className: "info",
@@ -71,28 +52,12 @@ const agregarProducto = (e) => {
         }).showToast();
     }
 
-
     // guardar en local storage
     localStorage.setItem('carrito', JSON.stringify(carrito))
 
-
-    const renderizarCarrito = () => {
-        sectionCarrito.innerHTML = ''
-        carrito.forEach((Prendas) => {
-            const prendaRenderizada = document.createElement('div')
-            prendaRenderizada.className = 'prendaRenderizada'
-            prendaRenderizada.innerHTML = `
-        <h4 class="prodName"><b>${Prendas.nombre} ${Prendas.tela}</b></h4>
-            <p class="prodColor">Color: ${Prendas.color}</p>        
-            <p class="prodMarca ">Marca:${Prendas.marca}</p>
-            <p clas="prodPrice"> $${Prendas.precio}</p>
-        `
-            sectionCarrito.append(prendaRenderizada)
-        })
-    }
-
+    // disparo funcion
     renderizarCarrito()
-    console.log(carrito);
+    console.log(carrito); /*borrar antes de entregar*/
 
     // toastify al sumar producto al carrito
     if (carrito.length < 5) {
@@ -105,12 +70,66 @@ const agregarProducto = (e) => {
             // disparo toast
         }).showToast();
     }
+
+    // contador de productos en el carrito
+    contadorCarrito.innerText = carrito.length
 }
 
+
+const renderizarCarrito = () => {
+    sectionCarrito.innerHTML = ''
+    carrito.forEach((remera) => {
+        const prendaRenderizada = document.createElement('div')
+        prendaRenderizada.className = 'prendaRenderizada'
+        prendaRenderizada.innerHTML = `
+    <h4 class="prodName"><b>${remera.nombre} ${remera.tela}</b></h4>
+        <p class="prodColor">Color: ${remera.color}</p>        
+        <p class="prodMarca ">Marca:${remera.marca}</p>
+        <p class="prodPrice"> $${remera.precio}</p>
+        <buttom class="quitarPrenda">QUITAR</buttom>
+    `
+        sectionCarrito.append(prendaRenderizada)
+    })
+
+
+// Suma total
+
+    // precioTotal.innerText = carrito.reduce(function(acc,Prendas) {return Prendas.precio +acc;})
+    precioTotal.innerText = carrito.map(Prendas => Prendas.precio).reduce((prev, curr) => prev + curr, 0)
+}
+
+
+
 // EVENTLISTENER 
+
+// boton comprar
 const seleccionarComprar = document.querySelectorAll('.buttonCTA')
 seleccionarComprar.forEach((botonComprar) => {
     botonComprar.addEventListener('click', agregarProducto)
+    
+}) 
+
+
+
+// Vaciar Carrito
+botonVaciar.addEventListener('click', () => {
+    carrito.length = 0
+    renderizarCarrito()
 })
 
 
+// BOTON QUITAR DEL CARRITO
+
+// const eliminarDelCarrito = (e) => {
+//     const prodId = e.target.getAttribute('data-id')
+//     const item = carrito.find((Prendas) =>Prendas.id==prodId)
+//     const indice = carrito.indexOf(item)
+
+//     carrito.splice(indice,1)
+
+//     renderizarCarrito()
+// }
+
+// const quitarPrenda = document.querySelectorAll('.quitarPrenda')
+// quitarPrenda.forEach((botonQuitar) => {
+//     botonQuitar.addEventListener('click', eliminarDelCarrito)})

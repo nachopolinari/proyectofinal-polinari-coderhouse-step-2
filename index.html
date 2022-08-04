@@ -66,7 +66,7 @@
                     <path d="M17 17h-11v-14h-2" />
                     <path d="M6 5l14 1l-1 7h-13" />
                 </svg>
-                <span class="cart-quantity">0</span>
+                <button><span id="cart-quantity">0</span></button>
             </div>
 
         </div>
@@ -228,8 +228,9 @@
             <div class="div5"> </div>
             <div class="div6"> </div>
         </div>
+<p class="precioProducto">TOTAL: $ <span id="precioTotal">0</span></p>
             <button class="comprarBtn">COMPRAR</button>
-            <button class="volverBtn">VOLVER</button>
+            <button id="btnVaciar">VACIAR CARRITO</button>
 
         
         
@@ -275,8 +276,8 @@
     </footer>
     <!-- Toastify -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/data.js"></script>
     <script src="./js/maindos.js"></script>
-
 </body>
 
 </html>

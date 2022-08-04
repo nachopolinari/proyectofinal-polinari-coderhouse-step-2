@@ -48,8 +48,9 @@
   border-radius: 15%;
   margin-right: 2%;
 }
-.cart-quantity{ background-color: red;
-border-radius: 50%;}
+.cart-quantity{ background-color: #e6ed09;
+border-radius: 25%;
+font-size:large;}
 
 /* section carrito*/
 
@@ -77,6 +78,11 @@ border: solid 2px black;}
   .div6 { grid-area: 6 / 1 / 7 / 2; }
   .comprarBtn{background-color: forestgreen;}
 .volverBtn{background-color: gray;}
+
+/* boton quitar del carrito */
+.quitarPrenda{border: 2px solid black;
+background-color: bisque;}
+
 /* menu */
 .bg-color {
   background-color: #00bfd8;
